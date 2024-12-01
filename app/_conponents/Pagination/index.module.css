@@ -1,0 +1,36 @@
+/* ===================================
+
+  ページネーション
+
+====================================== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.list {
+  margin: 0 4px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius);
+  border: 1px solid #333;
+  transition: all 0.3s;
+}
+.item:hover {
+  color: var(--color-text-unpainted);
+  background-color: var(--color-button-primary);
+}
+
+.current {
+  color: var(--color-text-unpainted);
+  background-color: var(--color-button-primary);
+}

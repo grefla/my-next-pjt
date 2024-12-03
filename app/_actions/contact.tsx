@@ -6,6 +6,7 @@ function validateEmail(email: string) {
 }
 
 export async function createContactData(_prevState: any, formData: FormData) {
+  // formのname属性ごとにformData.get()で値を取り出すことができる
   const rawFormData = {
     lastname: formData.get("lastname") as string,
     firstname: formData.get("firstname") as string,
@@ -50,6 +51,7 @@ export async function createContactData(_prevState: any, formData: FormData) {
       message: "メッセージを入力してください",
     };
   }
+
   const result = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`, {
     method: "POST",
     headers: {

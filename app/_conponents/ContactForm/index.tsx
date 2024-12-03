@@ -12,7 +12,7 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useFormState(createContactData, initialState);
   console.log(state);
-  if (state.status === "sucess") {
+  if (state.status === "success") {
     return (
       <p className={styles.sucess}>
         お問い合わせいただき、ありがとうございます。

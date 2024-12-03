@@ -85,6 +85,7 @@ export async function createContactData(_prevState: any, formData: FormData) {
       ],
     }),
   });
+
   try {
     await result.json();
   } catch (e) {
@@ -94,8 +95,6 @@ export async function createContactData(_prevState: any, formData: FormData) {
       message: "お問い合わせに失敗しました",
     };
   }
-  return {
-    status: "sucess",
-    message: "OK",
-  };
+
+  return { status: "success", message: "OK" };
 }
